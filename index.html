@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Adding all links including Jquery, bootstrap CDN, fontawesome CDN, Google Fonts &  Semantics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Issue Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+  </head>
+
+  <!-- invoked when fetchIssues is loaded -->
+  <body onload="fetchIssues()" style="font-family: 'Poppins', sans-serif;"> 
+    <div class="container" style="background-color: rgba(105, 105, 105, 0.014);">
+      <h1>JavaScript Issue Tracker <small>by Viswa Subramanian</small></h1>
+      
+      <!-- using a jumbotraon class to create a visually appealing text input box -->
+      <div class="jumbotron">
+        <h3>Add New Issue Here:</h3><br>
+        <form id="issueInputForm">
+          
+          <!-- a text form input to get the description of the input -->
+          <div class="form-group">
+            <label for="issueDescInput">Type out a description</label>
+            <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue ...">
+          </div>
+          
+          <!-- a dropdown input format to get the severity level of the issue -->
+          <div class="form-group">
+            <label for="issueSeverityInput">How severe is the issue?</label>
+            <select id="issueSeverityInput" class="form-control">
+              <option value="Low">Ok-ish i guess</option>
+              <option value="Medium">It's very Bad</option>
+              <option value="High">Things are Terrible</option>
+            </select>
+          </div>
+          
+           <!-- a text form input to assign the reponsibility -->
+          <div class="form-group">
+            <label for="issueAssignedToInput">Assigned the responsibility to?</label>
+            <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter responsible ...">
+          </div>
+          
+          <!-- a simple button to add the issue to the issue tracker -->
+          <button type="submit" class="btn btn-primary" style="background-color: rgb(0, 136, 226); border: rgb(0, 0, 0);"><div class="shadow p-3 mb-5 bg-white rounded">Add</div></button>
+        </form>
+      </div>
+
+      <div class="col-lg-12">
+        <div id="issuesList"></div>
+      </div>
+      <div class="footer">
+        <p>&copy <a href="https://inlustro.co/" target="_blank">inlusto.co</a> | <a href="https://github.com/Viswa-Subramanian/My-Projects" target="_blank">Viswa Subramanian</a></p>
+      </div>
+
+    </div>
+    
+    <!-- script tags to connect the js file and jquery file along with bootstrap -->
+    <script src="main2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  
+  </body>
+</html>
